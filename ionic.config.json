@@ -1,0 +1,7 @@
+{
+  "name": "windsworth-hotel",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

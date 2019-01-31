@@ -1,0 +1,130 @@
+.card {
+    height: 125px;
+    margin: auto;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+   // background-color: #177463;
+   background-image: linear-gradient(to right top, #177463, #2b9385, #3fb2aa, #55d3d0, #6cf4f9);
+    color: #fff;
+    padding: 10px;
+  }
+.bg-blue2-dark {
+  //  background-color: #4A89DC!important;
+    color: #4A89DC!important;
+    font-size: 70px;
+}
+
+.bg-red2-light {
+   // background-color: #ED5565!important;
+    color: #ED5565!important;
+    font-size: 70px;
+}
+.bg-blue1-light {
+   // background-color: #4FC1E9!important;
+    color: #4FC1E9!important;
+    font-size: 70px;
+}
+
+.bg-orange-light {
+   // background-color: #FC6E51!important;
+    color: #FC6E51!important;
+    font-size: 70px;
+}
+
+.bg-yellow1-dark {
+    //background-color: #F6BB42!important;
+    color: #F6BB42!important;
+    font-size: 70px;
+}
+.bg-brown2-light {
+   // background-color: #8E8271!important;
+    color: #8E8271!important;
+    font-size: 70px;
+}
+.bg-mint-light {
+   // background-color: #48CFAD!important;
+    color: #48CFAD!important;
+    font-size: 70px;
+}
+.bg-magenta2-light {
+    //background-color: #8067B7!important;
+    color: #8067B7!important;
+    font-size: 70px;
+}
+.bg-green1-dark {
+    //background-color: #8CC152!important;
+    color: #8cc152!important;
+    font-size: 70px;
+}
+  td{
+      width:30%;
+      font-family: Open sans-serif;
+      text-align: center;
+      font-size: medium;
+      font-weight: bold;
+  }
+a{
+    text-decoration: none;
+}
+
+
+.grid_item {
+    //background: #ebebeb;
+    display: block;
+    float: left;
+    position: relative;
+    border-radius: 25px;
+    text-align: center;
+    // margin-bottom: 35px;
+  }
+  
+  .grid_link {
+    display: block;
+    position: relative;
+    // overflow: hidden;
+  }
+  
+  .tile {
+    font-size: small;
+    font-family: "Segoe UI";
+    line-height: 18px;
+    padding: 10px;
+    position: absolute;
+    // bottom: 0%;
+    left: 0%;
+    font-weight: bold;
+    width: 100%;
+    color:dimgrey;
+  }
+
+  @media all and (max-width: 320px) {
+    .span__1,
+    .span__2,
+    .span__4{
+      width: 50%;
+      .grid_link {
+         padding-bottom: 70%;
+        }
+    }
+  }
+  
+  @media all and (min-width: 321px) and (max-width: 480px) {
+    .span__1,
+    .span__2,
+    .span__4{
+      width: 49.545252%;
+      .grid_link {
+         padding-bottom: 70%;
+        }
+    }
+  }
+  
+  @media all and (min-width: 481px) {
+    .span__1 {
+      width: 24%;
+      .grid_link {
+        padding-bottom: 70%;
+      }
+    }
+  }
+  
+  

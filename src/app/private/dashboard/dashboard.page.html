@@ -1,0 +1,114 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>dashboard</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content *ngIf="gotten"> 
+  <div style="height: 95px" class= "container">
+
+
+  <div style="width:50%; float:left;margin-top:3%">
+    <label style="font-size:large;color:dimgrey;font-weight:+bold;line-height: 2"><ion-icon name="contact"></ion-icon>{{userDetails.lastName}}, {{userDetails.firstName}} </label>
+      <br/>      <label style="font-size:small; color:blue;font-weight:bold;" (click)="logout()"><ion-icon slot="icon-only" name="log-out"style ="color:black"></ion-icon>Log Out</label>
+            <!-- <span style="float:right"><ion-icon slot="icon-only" name="log-out" style ="color:#fff" (click)="logout()"></ion-icon></span> -->
+  </div> 
+         <div class="imgcontainer"  style="width:50%; float:right">
+        <img src="assets/logotrans.png" style="width:30%;" alt="Avatar" class="avatar"><br/>
+        <img src="assets/nametrans1.png"  style="width:50%;" alt="Avatar" class="avatar"><br/>
+        <img src="assets/nametrans2.png" style="width:50%;" alt="Avatar" class="avatar"> 
+      </div> 
+    </div> 
+  <div class="card"> 
+ <div style="text-align: center"> 
+    <label style="font-size:small">Wallet Number</label>  <br/>  
+    <label style="font-size:large; font-weight:bold">{{wallet.walletNumber }}</label><br/><br/>
+  <label style="font-size:small">Available Balance</label>  <br/>  
+      <label style="font-size:large; font-weight:bold">{{wallet.availableBalance | currency: 'NGN' }}</label>
+      </div>
+  </div>
+  <ul class="grid" style="padding: unset">
+    <li class="grid_item span__1"><a [routerLink]="['/private/fund-wallet']" class="grid_link">
+      <div class="tile"><ion-icon name="wallet" class="bg-red2-light"></ion-icon><br/><br>Top Up Wallet</div></a></li>
+    <li class="grid_item span__1"><a [routerLink]="['/members/patient']" class="grid_link">
+        <div class="tile"><ion-icon name="cart" class="bg-blue2-dark"></ion-icon><br/><br>Purchase</div></a></li>
+      <li class="grid_item span__1"><a [routerLink]="['/members/defaulters']" class="grid_link">
+        <div class="tile"><ion-icon name="cart" class="bg-orange-light"></ion-icon><br/><br>Transaction History</div></a></li>
+      <li class="grid_item span__1"><a [routerLink]="['/members/new-appointment']" class="grid_link">
+        <div class="tile"><ion-icon name="cash" class="bg-blue1-light"></ion-icon><br/><br>Request Money</div></a></li>
+      <li class="grid_item span__1"><a [routerLink]="['/members/update-detail']" class="grid_link">
+        <div class="tile"><ion-icon name="phone-portrait" class="bg-yellow1-dark"></ion-icon><br/><br>Transfer</div></a></li>
+        <li class="grid_item span__1"><a [routerLink]="['/members/update-detail']" class="grid_link">
+        <div class="tile"><ion-icon name="warning" class="bg-green1-dark"></ion-icon><br/><br>Maintenance/Fault Report</div></a></li>
+  </ul>
+
+  <!-- <div class="landing-icons color-theme">
+      <table style="width:100%">
+            <tr>
+                    <td><br/></td>
+                    <td><br/></td>
+                    <td><br/></td>
+                  </tr>
+          <tr>
+            <td>
+                <a href="index.html">               
+                    <i class="bg-yellow1-dark">
+                      <ion-icon name="wallet"></ion-icon>
+                    </i>
+                    <span class="color-theme">Top Up Wallet</span>
+                    </a>
+            </td>
+            <td>
+                <a href="components.html">
+                    <i class="bg-blue2-dark">
+                        <ion-icon name="cart"></ion-icon>
+                    </i>
+                    <span class="color-theme">Purchase</span>
+                    </a>
+            </td>
+            <td>
+                <a href="navigations.html">
+                    <i class="bg-red2-light">
+                        <ion-icon name="cart"></ion-icon>
+                    </i>
+                    <span class="color-theme">Transaction History</span>
+                    </a>
+            </td>
+          </tr>
+          <tr>
+            <td><br/></td>
+            <td><br/></td>
+            <td><br/></td>
+          </tr>
+          <tr>
+            <td>
+                <a href="media.html">
+                    <i class="bg-blue1-light">
+                            <ion-icon name="cash"></ion-icon>
+                    </i>
+                    <span class="color-theme">Request Money</span>
+                    </a>
+            </td>
+            <td>
+                <a href="media.html">
+                    <i class="bg-orange-light">
+                        <ion-icon name="phone-portrait"></ion-icon>
+                    </i>
+                    <span class="color-theme">Transfer</span>
+                    </a>
+            </td>
+            <td>
+                <a href="pages.html">
+                    <i class="bg-brown2-light">
+                            <ion-icon name="warning"></ion-icon>
+                    </i>
+                    <span class="color-theme">Maintenance/Fault Report</span>
+                    </a>
+            </td>
+          </tr>
+        </table>
+
+    <div class="clear"></div>
+    </div> -->
+    <div class="footer"> {{currentDate |date: 'yyyy'}} &copy; Xtradot technologies.</div>
+</ion-content>

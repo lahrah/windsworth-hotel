@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Payment Confirmation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <div class="imgcontainer">
+        <img src="assets/logotrans.png" style="width:20%;" alt="Avatar" class="avatar"><br/>
+     <img src="assets/nametrans1.png"  style="width:35%;" alt="Avatar" class="avatar"><br/>
+     <img src="assets/nametrans2.png" style="width:35%;" alt="Avatar" class="avatar"> 
+     </div> 
+<div class="container">
+    <form>
+    <br/><br/>
+    <label>Payment Reference: <b style="float:right">{{details.Reference}}</b></label><br/><br/>
+    <label>Amount: <b style="float:right"> {{details.Amount | currency: 'NGN'}}</b></label><br/><br/>
+
+    <p style="color: red" *ngIf="isFunded">Above value has been added to your wallet successfully.</p>
+    <br/><br/>
+    <button type="submit" class="btn" (click)="Back()">Back to Dashboard</button>
+   </form>
+</div>
+</ion-content>

@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Fund Wallet</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<div class="imgcontainer">
+         <img src="assets/logotrans.png" style="width:20%;" alt="Avatar" class="avatar"><br/>
+      <img src="assets/nametrans1.png"  style="width:35%;" alt="Avatar" class="avatar"><br/>
+      <img src="assets/nametrans2.png" style="width:35%;" alt="Avatar" class="avatar"> 
+      </div> 
+<div class="container" style="margin-top:10%" *ngIf="!showconfirm">
+  <form>
+    <label for="email"><b>Amount <span style="color:red">*</span></b></label>
+  <input type="text" placeholder="Amount" name="Amount" [(ngModel)]="amount">
+  </form>
+  <button type="submit" class="btn" (click)="ShowConfirmation()">Proceed</button>
+</div>
+     
+<div class="container" *ngIf="showconfirm">
+    <form>
+    <br/><br/>
+    <label>Amount To Be Debited: <b style="float:right"> {{amount | currency: 'NGN'}}</b></label><br/><br/>
+    <label>Fee: <b style="float:right"> 1.9% + NGN 100.00</b></label><br/><br/>
+    <label>Total: <b style="float:right"> {{total | currency: 'NGN'}}</b></label><br/><br/>
+    <p style="font-style: italic; color: red">Above amount will be debited from your payment method.</p>
+    <br/><br/>
+      <button type="submit" class="btn" style="float:left" (click)="ChangeAmount()">Change Amount</button>
+    <button angular4-paystack
+    key = "{{publickey}}"
+    email="{{userDetails.email}}"
+    [amount]="paystackAmt"
+    ref="{{ref}}"
+    class="btn btn-primary"  (close)="paymentCancel()"
+    (callback)="paymentDone($event)">Pay with Paystack</button>
+  </form>
+</div>
+
+</ion-content>

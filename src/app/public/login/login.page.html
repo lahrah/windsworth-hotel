@@ -1,0 +1,32 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+<div class="imgcontainer" style="text-align: center; margin: 24px 0 12px 0">
+  <img src="assets/logo.png" alt="Avatar" class="avatar"><br/><br/>
+  <img src="assets/name.png" alt="Avatar" class="avatar"><br/>
+  <img src="assets/name2.png" alt="Avatar" class="avatar">
+</div>
+<ion-content padding>
+  <form>
+    <div class="container">
+      <div class="textfield">
+          <span> <ion-icon name="mail-open" style="color:#177463"></ion-icon> <b>Email</b> </span>
+          <input type="text" name="email" [(ngModel)] = "loginModel.email" required>
+      </div>
+      <br/>
+      <div class="textfield">
+          <span> <ion-icon name="lock" style="color:#177463"></ion-icon> <b>Password</b> </span>
+          <input type="password" name="psw" [(ngModel)] = "loginModel.password" required>
+          <span> <ion-icon name="finger-print" (click)="LoginWithFingerPrint()"></ion-icon> </span>
+      </div>
+      
+  <br/>
+      <button (click)= "login()">Login</button>
+    </div>
+  
+    <span class="psw" style="float:left;"><a [routerLink]="['/public/register']">Register</a></span><span class="psw">Forgot <a href="#">password?</a></span>
+      <div class="footer"> {{currentDate |date: 'yyyy'}} &copy; Xtradot technologies.</div>
+  </form>
+</ion-content>
